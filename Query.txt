@@ -1,9 +1,9 @@
-CREATE TABLE Students (   /* Create table with a single field as unique */
+CREATE TABLE Students (   
    ID INT NOT NULL UNIQUE
    Name VARCHAR(255)
 );
 
-CREATE TABLE Students (   /* Create table with multiple fields as unique */
+CREATE TABLE Students (   
    ID INT NOT NULL
    LastName VARCHAR(255)
    FirstName VARCHAR(255) NOT NULL
@@ -11,8 +11,8 @@ CREATE TABLE Students (   /* Create table with multiple fields as unique */
    UNIQUE (ID, FirstName)
 );
 
-ALTER TABLE Students   /* Set a column as unique */
+ALTER TABLE Students   
 ADD UNIQUE (ID);
-ALTER TABLE Students   /* Set multiple columns as unique */
-ADD CONSTRAINT PK_Student   /* Naming a unique constraint */
+ALTER TABLE Students   
+ADD CONSTRAINT PK_Student   
 UNIQUE (ID, FirstName);
